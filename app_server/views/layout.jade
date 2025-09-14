@@ -9,7 +9,25 @@ html
     link(rel='stylesheet', href='/stylesheets/all.min.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
-    block content
+    // Navigation section
+    nav.navbar.fixed-top.navbar-expand-md.navbar-light
+      .container
+        a.navbar-brand(href='/') Loc8r
+        button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarMain')
+          span.navbar-toggler-icon
+        #navbarMain.navbar-collapse.collapse
+          ul.navbar-nav.mr-auto
+            li.nav-item
+              a.nav-link(href='/about') About
+    // Main content block
+    .container.content
+      block content
+      // Footer section
+      footer
+        .row
+          .col-12
+            small &copy; Getting MEAN – Simon Holmes/Clive Harber 2018
+    // Scripts
     // jQuery
     script(
       src='https://code.jquery.com/jquery-3.3.1.slim.min.js',
